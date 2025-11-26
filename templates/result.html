@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body { font-family: Arial; text-align: center; padding: 50px; }
+        .box { padding: 20px; background: white; width: 400px; margin: auto; border-radius: 8px; }
+        h2 { color: #007bff; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Prediction Result</h2>
+
+    {% if pred == 1 %}
+        <h3 style="color:red;">⚠ Stroke Risk Detected</h3>
+    {% else %}
+        <h3 style="color:green;">✔ No Stroke Risk</h3>
+    {% endif %}
+
+    <p><b>Probability:</b> {{ prob }}</p>
+
+    <a href="/">Go Back</a>
+</div>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .box {
+        width: 420px;
+        padding: 35px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        border-radius: 18px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        animation: fadeIn 0.6s ease-in-out;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 15px;
+        font-size: 28px;
+        letter-spacing: 1px;
+        color: #fff;
+    }
+
+    h3 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 20px;
+        background: #007bff;
+        border-radius: 25px;
+        transition: 0.3s ease;
+    }
+
+    a:hover {
+        background: #0056b3;
+        transform: translateY(-2px);
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+
+</body>
+</html>

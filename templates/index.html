@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brain Stroke Prediction</title>
+    <style>
+        body { font-family: Arial; background: #f2f2f2; padding: 20px; }
+        form { background: white; padding: 20px; width: 400px; margin: auto; border-radius: 8px; }
+        input, select { width: 100%; padding: 8px; margin: 8px 0; }
+        button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Brain Stroke Detection</h2>
+
+<form method="POST" action="/predict">
+
+    <label>Gender</label>
+    <select name="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select>
+
+    <label>Age</label>
+    <input type="number" name="age" step="0.1" required>
+
+    <label>Hypertension</label>
+    <select name="hypertension">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select>
+
+    <label>Heart Disease</label>
+    <select name="heart_disease">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select>
+
+    <label>Ever Married</label>
+    <select name="ever_married">
+        <option>No</option>
+        <option>Yes</option>
+    </select>
+
+    <label>Work Type</label>
+    <select name="work_type">
+        <option>Private</option>
+        <option>Self-employed</option>
+        <option>Govt_job</option>
+        <option>children</option>
+        <option>Never_worked</option>
+    </select>
+
+    <label>Residence Type</label>
+    <select name="Residence_type">
+        <option>Urban</option>
+        <option>Rural</option>
+    </select>
+
+    <label>Avg Glucose Level</label>
+    <input type="number" name="avg_glucose_level" step="0.1" required>
+
+    <label>BMI</label>
+    <input type="number" name="bmi" step="0.1" required>
+
+    <label>Smoking Status</label>
+    <select name="smoking_status">
+        <option>never smoked</option>
+        <option>formerly smoked</option>
+        <option>smokes</option>
+        <option>Unknown</option>
+    </select>
+
+    <button type="submit">Predict Stroke Risk</button>
+</form>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #4b79a1, #283e51);
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        color: white;
+        margin-top: 40px;
+        font-size: 32px;
+        text-shadow: 0px 0px 8px rgba(255,255,255,0.4);
+    }
+
+    form {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 25px;
+        width: 420px;
+        margin: 40px auto;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        color: white;
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    label {
+        font-weight: 500;
+        display: block;
+        margin: 10px 0 5px;
+        font-size: 14px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        margin-bottom: 15px;
+        background: rgba(255,255,255,0.8);
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus {
+        box-shadow: 0 0 10px rgba(255,255,255,0.8);
+        transform: scale(1.03);
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        background: #00b4db;
+        background: linear-gradient(45deg, #00b4db, #0083b0);
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        background: linear-gradient(45deg, #0083b0, #00b4db);
+        box-shadow: 0px 0px 10px rgba(255,255,255,0.5);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+</body>
+</html>
